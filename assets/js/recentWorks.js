@@ -3,20 +3,20 @@ const recentWorks = [
         title: "Mobile | Saas",
         description: "At Inmigra we bring together in a single application all the tools that Latino immigrants in the United States need, to feel supported from beginning to end in the process. ​",
         techs: ["Flutter", "Dart", "Cubit", "Bloc", "OneSignal", "Firebase", "Video Call SDK", "Stripe", "RevenueCat", "ChatGPT", "OpenAI", "Socket.IO"],
-        img: "/images/inmigra-port.png",
+        img: "images/inmigra-port.png",
         url:"https://inmigrausa.com/"
     },
     {
         title: "CRM MVP | SaaS",
         description: "Designed and developed a Minimum Viable Product (MVP) CRM system and an interactive website as a Software as a Service (SaaS) solution using WordPress, MySQL, and an Angular-based dashboard for a delivery company in Puerto Rico. This scalable solution led to a notable increase in revenue and user registrations by delivering a streamlined, efficient, and user-friendly software experience.",
         techs: ["WordPress Codex", "Node", "JS", "TS", "PHP", "MySQL", "AWS Apache", "Unraid", "API", "WebSockets"],
-        img: "/images/sendtopr.png"
+        img: "images/sendtopr.png"
     },
     {
         title: "Advanced Course in Node.js, TypeScript, TDD, and Clean Code Practices",
         description: "Developed a highly acclaimed Udemy course designed to elevate programming skills by sharing expert knowledge in Test-Driven Development (TDD) and TypeScript. The course offers an in-depth exploration of SOLID principles and Clean Architecture, empowering developers to build scalable and maintainable software. By combining theory with hands-on practice, this course provides actionable insights and cutting-edge techniques, positioning participants to excel in modern software development.",
         techs: ["Jest", "TS", "JS", "TDD", "SOLID", "MongoDB", "Node"],
-        img: "/images/tdd-typescript.png",
+        img: "images/tdd-typescript.png",
         "url":"https://www.udemy.com/course/programador-autodidacta-nodejs-typescript-tdd-clean-code/"
     },
 ];
