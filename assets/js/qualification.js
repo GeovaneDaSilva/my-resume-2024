@@ -1,5 +1,16 @@
 const qualifications = [
     {
+        title: "AWS Certified Data Engineer – Associate",
+        url: 'https://www.credly.com/badges/c7560664-9b93-41fe-8923-60f6dae36552',
+        year: 2024,
+        description: "The AWS Data Engineer certification provides skills in building and managing scalable, efficient data architectures. It focuses on designing and optimizing data pipelines, managing databases and data lakes on AWS, implementing data storage solutions like Amazon Redshift, and automating workflows while ensuring data integrity and security. Additionally, it uses AWS tools like Glue, S3, and Athena to process and query large volumes of data, optimizing performance and ensuring regulatory compliance.",
+        institute: {
+            name: "AWS CLOUD",
+            shortName: "AWS",
+            duration: "DEC 2024 - DEC 2028"
+        }
+    },
+    {
         title: "DevOps",
         url: 'https://images.credential.net/embed/18b6gedo.png',
         year: 2022,
@@ -35,23 +46,26 @@ const qualifications = [
 
 const parent = document.getElementById('qualification');
 
-const html = qualifications.map(quali =>
-    `<li class="mb-10 ml-4">
-        <div class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
+const html = qualifications.map(quali => `
+    <li class="qualification-item">
+        <div class="timeline-marker"></div>
+        <div class="qualification-content">
+            <div class="qualification-header">
+                <time class="qualification-year">${quali.year}</time>
+                <h3 class="qualification-title">
+                    ${quali.title}
+                    <a href="${quali.url}" target="_blank" class="qualification-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
+                    </a>
+                </h3>
+            </div>
+            <p class="qualification-description">${quali.description}</p>
+            <p class="qualification-institute">
+                <span title="${quali.institute.name}">${quali.institute.shortName}</span>
+                &bull; ${quali.institute.duration}
+            </p>
         </div>
-        <div class="flex items-center">
-            <time class="mb-1 mr-3 px-3 py-2 rounded-md leading-none text-gray-100 bg-blue-500 dark:bg-gray-600">${quali.year}</time>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-200">${quali.title}
-                <a href="${quali.url}" target="_blank" class="ml-3">
-                    <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
-                </a>
-            </h3>
-        </div>
-        <p class="mb-3 text-base font-normal text-gray-800 dark:text-gray-400">${quali.description}</p>
-        <p class="text-base font-light text-gray-800 dark:text-gray-400">
-        <span title=${quali.institute.name}>${quali.institute.shortName}</span> &bull; ${quali.institute.duration}
-        </p>
-    </li>`);
+    </li>
+`);
 
 parent.innerHTML = html.join(" ");
-

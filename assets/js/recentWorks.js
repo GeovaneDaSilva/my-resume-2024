@@ -10,33 +10,34 @@ const recentWorks = [
         title: "CRM MVP | SaaS",
         description: "Designed and developed a Minimum Viable Product (MVP) CRM system and an interactive website as a Software as a Service (SaaS) solution using WordPress, MySQL, and an Angular-based dashboard for a delivery company in Puerto Rico. This scalable solution led to a notable increase in revenue and user registrations by delivering a streamlined, efficient, and user-friendly software experience.",
         techs: ["WordPress Codex", "Node", "JS", "TS", "PHP", "MySQL", "AWS Apache", "Unraid", "API", "WebSockets"],
-        img: "images/sendtopr.png"
+        img: "images/sendtopr.png",
+        url:"https://sendtopuertorico.com"
     },
     {
         title: "Advanced Course in Node.js, TypeScript, TDD, and Clean Code Practices",
         description: "Developed a highly acclaimed Udemy course designed to elevate programming skills by sharing expert knowledge in Test-Driven Development (TDD) and TypeScript. The course offers an in-depth exploration of SOLID principles and Clean Architecture, empowering developers to build scalable and maintainable software. By combining theory with hands-on practice, this course provides actionable insights and cutting-edge techniques, positioning participants to excel in modern software development.",
         techs: ["Jest", "TS", "JS", "TDD", "SOLID", "MongoDB", "Node"],
         img: "images/tdd-typescript.png",
-        "url":"https://www.udemy.com/course/programador-autodidacta-nodejs-typescript-tdd-clean-code/"
+        url:"https://www.udemy.com/course/programador-autodidacta-nodejs-typescript-tdd-clean-code/"
     },
 ];
 const parent = document.getElementById('recent-works');
 
 const getTech = (techs) => {
     return techs.map(tech =>
-        `<button type="button" class="text-gray-900 bg-gray-100 border border-gray-100  hover:bg-gray-50 font-medium rounded-md text-sm px-3.5 py-2 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-600 dark:hover:border-gray-600">
+        `<button type="button" class="text-gray-900 bg-gray-100 border border-gray-100 hover:bg-gray-50 font-medium rounded-md text-sm px-3.5 py-2 mr-2 mb-2 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-600 dark:hover:border-gray-600">
                 ${tech}
             </button>`).join(" ");
 }
 
 const html = recentWorks.map(work =>
-    `<div class="bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
-        <div class="lg:h-36 object-cover">
-            <img class="rounded-t-lg w-full" src=${work.img} alt=${work.title} />
+    `<div class="bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 lg:col-span-1 sm:col-span-2 sm:mb-6">
+        <div class="w-full h-auto object-cover rounded-t-lg">
+            <img class="rounded-t-lg w-full h-36 sm:h-48 object-cover" src=${work.img} alt=${work.title} />
         </div>
-        <div class="p-3 border-t border-gray-100 dark:border-gray-600">
-            <h5 class="text-xl font-semibold text-gray-900 dark:text-gray-200">${work.title}</h5>
-        <p class="font-light text-gray-800 dark:text-gray-400">${work.description}</p>
+        <div class="p-4 border-t border-gray-100 dark:border-gray-600">
+            <h5 class="text-lg font-semibold text-gray-900 dark:text-gray-200">${work.title}</h5>
+        <p class="font-light text-sm text-gray-800 dark:text-gray-400 mt-2">${work.description}</p>
         <div class="my-4 flex flex-wrap">
             ${getTech(work.techs)}
         </div>
